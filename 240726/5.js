@@ -14,7 +14,7 @@ function plusScore(scores) {
         newScores.push(val);
         scores[i] = newScores[i]
     }
-}
+} 
 
 plusScore(scores);
 

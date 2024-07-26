@@ -24,5 +24,5 @@ console.log(mySchedule || false); // < false >
 // mySchedule은 null이며 null은 false가 나온다. 
 // 논리연산자(||)는 어느 하나가 true이면 true라는 결과가 나오는데 , 둘다 false이므로 결과값은 false이다.
 console.log(!!mySchedule); // < false >
-// 논리연산자는 ! 는 NOT의 의미이다. 따라서 false의 반대의 반대 이므로 결과는 false
+// 논리연산자는 ! 는 NOT의 의미이다. 따라서 false의 반대의 반대 이므로 결과는 false이다.
 

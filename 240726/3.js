@@ -5,7 +5,7 @@
 
 function evenOdd(num) {
     // 코드를 작성해 주세요.
-    if(num%2 === 0){
+    if(num % 2 === 0){
         return "짝수";
     }else{
         return "홀수";

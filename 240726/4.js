@@ -14,7 +14,7 @@ function calculator(num1, Operator, num2) {
     }else if(Operator === "/"){
         return console.log(num1 / num2);
     }
-}
+} 
 
 calculator(3, "+", 6); // 결과값 9
 calculator(11, "-", 6); // 결과값 5

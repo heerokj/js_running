@@ -10,7 +10,7 @@ const heerok = {
     name: "정희록",
     age: 31,
     mbti: "isfp"
-};
+}; 
 
 console.log(heerok.name);
 console.log(heerok.age);
