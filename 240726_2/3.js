@@ -19,27 +19,25 @@ var copyObject = function (object){
   
 
   // 얕은 복사를 수행하여 shallowCopy를 만들어주세요.
-  const shallowCopy = copyObject(student);
+  const shallowCopy = student;
 
   // 깊은 복사를 수행하여 deepCopy를 만들어주세요.   //??? 배열복사는??
   const deepCopy = copyObject(student);
   deepCopy.address = copyObject(student.address);
+  //const deepCopy = structuredClone(student); //재상튜터님이 설명 **
+
   
   // 얕은 복사 객체와 원본 객체를 비교하여 출력해주세요
-  console.log("1. 원본 객체(student)와 얕은 복사 객체가 같을까요?", ); 
-  console.log(student === shallowCopy); //false
+  console.log("1. 원본 객체(student)와 얕은 복사 객체가 같을까요?", student === shallowCopy ); //true
   
   // 얕은 복사 객체의 address와 원본 객체의 address를 비교하여 출력해주세요.
-  console.log("2. 원본 객체의 address와 얕은 복사 객체의 address가 같을까요?", );
-  console.log(student.address === shallowCopy.address); //true
+  console.log("2. 원본 객체의 address와 얕은 복사 객체의 address가 같을까요?", student.address === shallowCopy.address); //true
   
   // 깊은 복사 객체와 원본 객체를 비교하여 출력해주세요.
-  console.log("3. 원본 객체(student)와 깊은 복사 객체가 같을까요?", ); 
-  console.log(student === deepCopy); //false
+  console.log("3. 원본 객체(student)와 깊은 복사 객체가 같을까요?", student === deepCopy); //false
   
   // 깊은 복사 객체의 address와 원본 객체의 address를 비교하여 출력해주세요.
-  console.log("4. 원본 객체의 address와 깊은 복사 객체의 address가 같을까요?", );
-  console.log(student.address === deepCopy.address); //false
+  console.log("4. 원본 객체의 address와 깊은 복사 객체의 address가 같을까요?", student.address === deepCopy.address); //false
   
   
   2.
@@ -52,15 +50,12 @@ var copyObject = function (object){
   deepCopy.address.city = "busan";
 
   // 결과 확인 
-  console.log("5. 원본 객체(student):",); 
-  console.log(student);
-  console.log("6. 얕은 복사된 객체(shallowCopy):",); 
-  console.log(shallowCopy);
-  console.log("7. 깊은 복사된 객체(deepCopy):", );
-  console.log(deepCopy);
+  console.log("5. 원본 객체(student):", student); 
+  console.log("6. 얕은 복사된 객체(shallowCopy):", shallowCopy); 
+  console.log("7. 깊은 복사된 객체(deepCopy):", deepCopy);
   
   /* 1~7번까지 출력값을 출력해보고 적어주세요
-  예 ) 1. false 
+  예 ) 1. true 
       2. true
       3. false
       4. false
