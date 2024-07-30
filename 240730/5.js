@@ -1,5 +1,5 @@
 // 5. [선택 문제] 가장 먼저 완료된 비동기 함수를 찾아라.
-//[아직 푸는 중....]
+// Promise.race() 
 
 function taskA() {
     return new Promise((resolve) => {
@@ -29,22 +29,4 @@ function taskC() {
 }
 
 //가장 먼저 완료된 작업의 결과를 반환하는 findFirstCompletedTask라는 함수를 작성하세요.
-
-async function findFirstCompletedTask(){
-    try {
-        // 병렬로 promise들을 한 번에 처리하는 코드
-        const results = await Promise.all([taskA(), taskB(), taskC()])
-
-        for(let i = 0; i < results.length; i++ ){
-          console.log(results[0])
-        }
-        // results.forEach((result) => console.log(result[0]));
-      } catch (error) {
-        console.error("Error:", error);
-      }
-
-}
-
-
-// 함수 호출
-findFirstCompletedTask();
+Promise.race([taskA(), taskB(), taskC()]).then((result) => console.log(result));

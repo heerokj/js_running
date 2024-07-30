@@ -38,11 +38,9 @@
         console.log(url) //https://cdn2.thecatapi.com/images/bkc.jpg
         
         const container = document.querySelector("#imageContainer");
-        const temp = document.createElement("div");
+        const temp = document.createElement("img");
 
-        temp.innerHTML = `
-        <img src="${url}" alt="">
-        `
+        temp.src = url;
         container.appendChild(temp)
       })
       .catch((error) => console.log("error", error))
