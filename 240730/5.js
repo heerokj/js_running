@@ -1,4 +1,5 @@
 // 5. [선택 문제] 가장 먼저 완료된 비동기 함수를 찾아라.
+//[아직 푸는 중....]
 
 function taskA() {
     return new Promise((resolve) => {
